@@ -6,9 +6,6 @@ router.get('/:machineId', (req, res) => {
   const machineId = req.params.machineId;
   const startTime = req.query.startTime;
   const endTime = req.query.endTime;
-  console.log(machineId);
-  console.log(startTime);
-  console.log(endTime);
   const cycleData = new Promise(resolve => {
     resolve(dataQuery.dataQuery(machineId, startTime, endTime));
   });
